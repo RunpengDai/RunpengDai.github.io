@@ -185,6 +185,15 @@
     .experience-description li {
         margin-bottom: 6px;
     }
+    .coauthors a {
+      color: inherit;
+      font-weight: 500;
+      text-decoration: none;
+      transition: text-decoration 0.2s;
+    }
+    .coauthors a:hover {
+      text-decoration: underline;
+    }
 </style>
 
 
@@ -315,7 +324,7 @@
                 <div class="experience-description">
                       <ul>
                           <li> Develop Curiosity-Driven Exploration leveraging a model's intrinsic sense of curiosity to guide exploration in RLVR</li>
-                          <li>Collaborated with fellow interns and colleagues on the Parallel-R1 and Multimodal exploration.</li>
+                          <li>Collaborated with fellow interns and colleagues on Parallel-R1 and VOGUE.</li>
                       </ul>
                 </div>
             </div>
@@ -368,9 +377,8 @@
                 <p>
                 <papertitle>CDE: Curiosity-Driven Exploration for Efficient Reinforcement Learning in Large Language Models</papertitle>
                 </p>
-                <strong>Runpeng Dai</strong>, Linfeng Song, Haolin Liu, Zhenwen Liang, Dian Yu, Haitao Mi, Zhaopeng Tu, Rui Liu, Tong Zheng, Hongtu Zhu, Dong Yu.
-                <br>
-                <em><strong>(arXiv)</strong>, 2025.</em>
+                <div class="coauthors" id="coauthors-cde"></div>
+                <em><strong>Neurips 2025 MATH-AI workshop</strong>, 2025.</em>
                 <br>
                 <a href="https://arxiv.org/abs/2509.09675">[Paper]</a>
             </td>
@@ -384,15 +392,44 @@
                 <p>
                 <papertitle>Parallel-R1: Towards Parallel Thinking via Reinforcement Learning</papertitle>
                 </p>
-                Tong Zheng, Hongming Zhang, Wenhao Yu, Xiaoyang Wang, Xinyu Yang, <strong>Runpeng Dai</strong>, Rui Liu, Huiwen Bao, Chengsong Huang, Heng Huang, Dong Yu.
-                <br>
-                <em><strong>(arXiv)</strong>, 2025.</em>
+                <div class="coauthors" id="coauthors-parallelr1"></div>
+                <em><strong>Neurips 2025 Efficient Reasoning workshop</strong>, 2025.</em>
                 <br>
                 <a href="https://arxiv.org/abs/2509.07980">[Paper]</a>
                 <a href="https://github.com/zhengkid/Parallel-R1">[Code]</a><a style="color:#e74c3c; font-weight:bold;">[Over 100+ Stars]</a>
             </td>
         </tr>
-          
+
+        <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
+            <td style="padding:10px;width:20%;vertical-align:middle">
+                <img src="images/VOGUE.png" alt="hpp" style="border-style: none" width="200">
+            </td>
+            <td style="padding:10px;width:80%;vertical-align:middle">
+                <p>
+                <papertitle>VOGUE: Guiding Exploration with Visual Uncertainty Improves Multimodal Reasoning</papertitle>
+                </p>
+                <div class="coauthors" id="coauthors-VOGUE"></div>
+                <em><strong>(arXiv)</strong>, 2025.</em>
+                <br>
+                <a href="https://arxiv.org/abs/2510.01444">[Paper]</a>
+            </td>
+        </tr>
+
+        <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
+            <td style="padding:10px;width:10%;vertical-align:middle">
+                <img src="images/stateval.png" alt="hpp" style="border-style: none" width="200">
+            </td>
+            <td style="padding:10px;width:80%;vertical-align:middle">
+                <p>
+                <papertitle>StatEval: A Comprehensive Benchmark for Large Language Models in Statistics</papertitle>
+                </p>
+                <div class="coauthors" id="coauthors-stat_eval"></div>
+                <em><strong>(arXiv)</strong>, 2025.</em>
+                <br>
+                <a href="https://arxiv.org/abs/2510.09517">[Paper]</a>
+                <a href="https://stateval.github.io/">[Project]</a>
+            </td>
+        </tr>
         <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">  
             <td style="padding:10px;width:20%;vertical-align:middle">
                 <img src="images/r1re.jpg" alt="hpp" style="border-style: none" width="200">
@@ -401,13 +438,12 @@
                 <p>
                 <papertitle>R1-RE: Cross-Domain Relation Extraction with RLVR</papertitle>
                 </p>
-                  <strong>Runpeng Dai</strong>, Tong Zheng, Run Yang, Kaixian Yu, Hongtu Zhu.
-                <br>
-                  <em><strong>(arXiv)</strong>, 2025.</em>
+                <div class="coauthors" id="coauthors-r1re"></div>
+                <em><strong>(arXiv)</strong>, 2025.</em>
                 <br>
                 <a href="https://arxiv.org/abs/2507.04642">[Paper]</a>
             </td>
-        </tr>                  
+        </tr>             
         </tbody></table>
 
 
@@ -425,8 +461,7 @@
                 <p>
                 <papertitle>Causal Deepsets for Off-policy Evaluation under Spatial or Spatio-temporal Interferences</papertitle>
                 </p>
-                <strong>Runpeng Dai</strong>,  Jianing Wang, Fan Zhou, Shikai Luo, Zhiwei Qin, Chengchun Shi, Hongtu Zhu.
-                <br>
+                <div class="coauthors" id="coauthors-pie"></div>
                 <em><strong>(arXiv)</strong>, 2024.</em>
                 <br>
                 <a href="https://arxiv.org/abs/2407.17910">[Paper]</a>
@@ -441,8 +476,7 @@
                 <p>
                 <papertitle>Deep Distributional Learning with Non-crossing Quantile Network</papertitle>
                 </p>
-                Guohao Shen, <strong>Runpeng Dai</strong>, Guojun Wu, Shikai Luo, Chengchun Shi, Hongtu Zhu
-                <br>
+                <div class="coauthors" id="coauthors-quantile"></div>
                 <em><strong>(arXiv)</strong>, 2025.</em>
                 <br>
                 <a href="https://arxiv.org/abs/2504.08215">[Paper]</a>
@@ -478,6 +512,76 @@
 </body>
 
 
+<script>
+  // 定义人名到个人主页的映射
+  const personWebsites = {
+    "Runpeng Dai": "https://runpengdai.github.io/",
+    "Linfeng Song": "https://freesunshine0316.github.io/",
+    "Haolin Liu": "https://scholar.google.com/citations?user=DgvwKhgAAAAJ&hl=en",
+    "Zhenwen Liang": "https://zhenwen-nlp.github.io/",
+    "Dian Yu": "https://sites.google.com/site/yudiandoris/",
+    "Haitao Mi": "https://scholar.google.com/citations?user=G3OMbFSm858C&hl=en",
+    "Zhaopeng Tu": "https://tuzhaopeng.github.io/",
+    "Rui Liu": "https://ruiiu.github.io/",
+    "Tong Zheng": "https://kidzheng.github.io/",
+    "Hongtu Zhu": "https://sph.unc.edu/adv_profile/hongtu-zhu-phd/",
+    "Dong Yu": "https://sites.google.com/view/dongyu888/",
+    "Kaixian Yu": "https://scholar.google.com/citations?user=Cisngm4AAAAJ&hl=en",
+    "Chengchun Shi": "https://callmespring.github.io/",
+    "Fan Zhou": "https://scholar.google.com/citations?user=4QJkjl0AAAAJ&hl=en",
+    // 其他人名...
+  };
+
+  // 把作者字符串变成带链接的 HTML
+  function renderAuthors(authors) {
+  return authors.split(',').map(name => {
+    name = name.trim();
+    if (name === "Runpeng Dai") {
+      return `<strong>${name}</strong>`;
+    }
+    const url = personWebsites[name];
+    return url ? `<a href="${url}" target="_blank">${name}</a>` : name;
+  }).join(', ');
+}
+
+  // 等页面加载完再渲染 coauthors
+    window.onload = function() {
+    // CDE
+    const cdeAuthors = "Runpeng Dai, Linfeng Song, Haolin Liu, Zhenwen Liang, Dian Yu, Haitao Mi, Zhaopeng Tu, Rui Liu, Tong Zheng, Hongtu Zhu, Dong Yu";
+    const cdeDiv = document.getElementById('coauthors-cde');
+    if (cdeDiv) cdeDiv.innerHTML = renderAuthors(cdeAuthors);
+
+    // Parallel-R1
+    const parallelr1Authors = "Tong Zheng, Hongming Zhang, Wenhao Yu, Xiaoyang Wang, Xinyu Yang, Runpeng Dai, Rui Liu, Huiwen Bao, Chengsong Huang, Heng Huang, Dong Yu";
+    const parallelr1Div = document.getElementById('coauthors-parallelr1');
+    if (parallelr1Div) parallelr1Div.innerHTML = renderAuthors(parallelr1Authors);
+
+    // R1-RE
+    const r1reAuthors = "Runpeng Dai, Tong Zheng, Run Yang, Kaixian Yu, Hongtu Zhu";
+    const r1reDiv = document.getElementById('coauthors-r1re');
+    if (r1reDiv) r1reDiv.innerHTML = renderAuthors(r1reAuthors);
+
+    // VOGUE
+    const vogueAuthors = "Rui Liu, Dian Yu, Tong Zheng, Runpeng Dai, Zongxia Li, Wenhao Yu, Zhenwen Liang, Linfeng Song, Haitao Mi, Pratap Tokekar, Dong Yu";
+    const vogueDiv = document.getElementById('coauthors-VOGUE');
+    if (vogueDiv) vogueDiv.innerHTML = renderAuthors(vogueAuthors);
+    
+    // StatEval
+    const statEvalAuthors = "Yuchen Lu, Run Yang, Yichen Zhang, Shuguang Yu, Runpeng Dai, ..., Fan Zhou";
+    const statEvalDiv = document.getElementById('coauthors-stat_eval');
+    if (statEvalDiv) statEvalDiv.innerHTML = renderAuthors(statEvalAuthors);
+    
+    // PIE
+    const pieAuthors = "Runpeng Dai, Jianing Wang, Fan Zhou, Shikai Luo, Zhiwei Qin, Chengchun Shi, Hongtu Zhu";
+    const pieDiv = document.getElementById('coauthors-pie');
+    if (pieDiv) pieDiv.innerHTML = renderAuthors(pieAuthors);
+
+    // Quantile
+    const quantileAuthors = "Guohao Shen, Runpeng Dai, Guojun Wu, Shikai Luo, Chengchun Shi, Hongtu Zhu";
+    const quantileDiv = document.getElementById('coauthors-quantile');
+    if (quantileDiv) quantileDiv.innerHTML = renderAuthors(quantileAuthors);
+  };
+</script>
 <!-- Runpeng's Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2M2L0981ZZ"></script>
 <script>
