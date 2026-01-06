@@ -442,8 +442,26 @@
                 <em><strong>(arXiv)</strong>, 2025.</em>
                 <br>
                 <a href="https://arxiv.org/abs/2507.04642">[Paper]</a>
+                <a href="https://github.com/RunpengDai/R1_RE">[Code]</a>
             </td>
-        </tr>             
+        </tr>          
+                <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">  
+            <td style="padding:10px;width:20%;vertical-align:middle">
+                <img src="images/FI.png" alt="hpp" style="border-style: none" width="200">
+              </td>
+            <td style="padding:10px;width:80%;vertical-align:middle">
+                <p>
+                <papertitle>	
+                Breach in the Shield: Unveiling the Vulnerabilities of Large Language Models</papertitle>
+                </p>
+                <div class="coauthors" id="coauthors-FI"></div>
+                <em><strong>EACL main</strong>, 2025.</em>
+                <br>
+                <a href="https://arxiv.org/pdf/2504.03714">[Paper]</a>
+            </td>
+        </tr> 
+        
+
         </tbody></table>
 
 
@@ -483,6 +501,29 @@
             </td>
         </tr>
         </tbody></table>
+
+      <h3 style="text-indent:20px;color:#0fa716;border-bottom:2px solid #0fa716;padding-bottom:5px;"> Applied Research </h3> 
+
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+
+      <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
+        <td style="padding:10px;width:20%;vertical-align:middle">
+            <img src="images/OD.png" alt="hpp" style="border-style: none" width="200">
+        </td>
+        <td style="padding:10px;width:80%;vertical-align:middle">
+            <p>
+            <papertitle>Spatio-temporal Prediction of Fine-Grained Origin-Destination Matrices with Applications in Ridesharing</papertitle>
+            </p>
+            <div class="coauthors" id="coauthors-OD"></div>
+            <em><strong>Journal of Computational and Graphical Statistics</strong>, 2026.</em>
+            <br>
+            <a href="https://arxiv.org/abs/2503.24237">[Paper]</a>
+        </td>
+      </tr>
+
+      </tbody></table>
+
       </section>
 
         <br>
@@ -508,8 +549,12 @@
 
       </td>
     </tr>
+    
   </table>
 </body>
+
+  
+
 
 
 <script>
@@ -561,6 +606,11 @@
     const r1reDiv = document.getElementById('coauthors-r1re');
     if (r1reDiv) r1reDiv.innerHTML = renderAuthors(r1reAuthors);
 
+    // FI
+    const fiAuthors = "Run Yang, Runpeng Dai, Fan Zhou, Hongtu Zhu";
+    const fiDiv = document.getElementById('coauthors-FI');
+    if (fiDiv) fiDiv.innerHTML = renderAuthors(fiAuthors);
+
     // VOGUE
     const vogueAuthors = "Rui Liu, Dian Yu, Tong Zheng, Runpeng Dai, Zongxia Li, Wenhao Yu, Zhenwen Liang, Linfeng Song, Haitao Mi, Pratap Tokekar, Dong Yu";
     const vogueDiv = document.getElementById('coauthors-VOGUE');
@@ -580,6 +630,11 @@
     const quantileAuthors = "Guohao Shen, Runpeng Dai, Guojun Wu, Shikai Luo, Chengchun Shi, Hongtu Zhu";
     const quantileDiv = document.getElementById('coauthors-quantile');
     if (quantileDiv) quantileDiv.innerHTML = renderAuthors(quantileAuthors);
+
+    // OD
+    const odAuthors = "Run Yang, Runpeng Dai, Siran Gao, Xiaocheng Tang, Fan Zhou, Hongtu Zhu";
+    const odDiv = document.getElementById('coauthors-OD');
+    if (odDiv) odDiv.innerHTML = renderAuthors(odAuthors);
   };
 </script>
 <!-- Runpeng's Google tag (gtag.js) -->
