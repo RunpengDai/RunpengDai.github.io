@@ -235,7 +235,9 @@
             </a>
           </p>
             <p style="background-color:#eef1f4; padding: 15px; margin-top: 30px; font-weight:bold; text-align:center;">
-              I am actively seeking 2026 summer internships. Let's connect!
+              Will be joining Apple <i class="fa fa-apple"></i> as a Research Intern in Summer 2026. 
+              
+              See you in Cupertino! 
             </p>
         </td>
         
@@ -383,6 +385,22 @@
                 <a href="https://arxiv.org/abs/2509.09675">[Paper]</a>
             </td>
         </tr>
+        
+        <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
+            <td style="padding:10px;width:20%;vertical-align:middle">
+                <img src="images/probe.png" alt="hpp" style="border-style: none" width="200">
+            </td>
+            <td style="padding:10px;width:80%;vertical-align:middle">
+                <p>
+                <papertitle>Parallel-Probe: Towards Efficient Parallel Thinking via 2D Probing</papertitle>
+                </p>
+                <div class="coauthors" id="coauthors-parallelProbe"></div>
+                <em><strong>(arXiv)</strong>, 2026.</em>
+                <br>
+                <a href="https://arxiv.org/abs/2602.03845">[Paper]</a>
+                <a href="https://github.com/zhengkid/Parallel-Probe">[Code]</a>
+            </td>
+        </tr>
 
         <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
             <td style="padding:10px;width:20%;vertical-align:middle">
@@ -396,7 +414,7 @@
                 <em><strong>(ICLR)</strong>, International Conference on Learning Representations, 2026.</em>
                 <br>
                 <a href="https://arxiv.org/abs/2509.07980">[Paper]</a>
-                <a href="https://github.com/zhengkid/Parallel-R1">[Code]</a><a style="color:#e74c3c; font-weight:bold;">[Over 100+ Stars]</a>
+                <a href="https://github.com/zhengkid/Parallel-R1">[Code]</a><a style="color:#e74c3c; font-weight:bold;">[Over 200+ Stars]</a>
             </td>
         </tr>
 
@@ -531,7 +549,9 @@
           <h2 class="highlights-title" style="margin-top: 0px;">Teaching & Professional Service</h2>
           <table style="line-height:150%" class="table table-hover table-striped">
             <tr><td style="width:20%;">Teaching Assistant of <a href="https://bios740.github.io/">BIOS740 Deep Learning for Biomedical Applications</a>, University of North Carolina at Chapel Hill, Fall 2024</td></tr>
-            <tr><td style="width:20%;">Lecturer of <a href="https://bios740.github.io/">Deep Learning Methods in Advanced Statistical Problems</a>, JSM 2025, ICSA 2024</td></tr>
+            <tr><td style="width:20%;">Lecturer of <a href="https://bios740.github.io/">Deep Learning Methods in Advanced Statistical Problems</a>, JSM 2026, ENAR 2026, JSM 2025, ICSA 2024</td></tr>
+            <tr><td style="width:20%;">Graduate Travel Award Recipient, 2026, University of North Carolina at Chapel Hill</td></tr>
+            <tr><td style="width:20%;">Gillings Global Health Expendable Scholarship, 2026, University of North Carolina at Chapel Hill</td></tr>
           </table> 
           </section>
         <br>
@@ -600,6 +620,11 @@
     const parallelr1Authors = "Tong Zheng, Hongming Zhang, Wenhao Yu, Xiaoyang Wang, Xinyu Yang, Runpeng Dai, Rui Liu, Huiwen Bao, Chengsong Huang, Heng Huang, Dong Yu";
     const parallelr1Div = document.getElementById('coauthors-parallelr1');
     if (parallelr1Div) parallelr1Div.innerHTML = renderAuthors(parallelr1Authors);
+
+    // Parallel-Probe
+    const parallelProbeAuthors = "Tong Zheng^*, Chengsong Huang, Runpeng Dai, Yun He, Rui Liu, Xin Ni, Huiwen Bao, Kaishen Wang, Hongtu Zhu, Jiaxin Huang, Furong Huang, Heng Huang";
+    const parallelProbeDiv = document.getElementById('coauthors-parallelProbe');
+    if (parallelProbeDiv) parallelProbeDiv.innerHTML = renderAuthors(parallelProbeAuthors);
 
     // R1-RE
     const r1reAuthors = "Runpeng Dai, Tong Zheng, Run Yang, Kaixian Yu, Hongtu Zhu";
