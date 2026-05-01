@@ -602,7 +602,7 @@
   function renderAuthors(authors) {
   return authors.split(',').map(name => {
     name = name.trim();
-    if (name === "Runpeng Dai") {
+    if (name === "Runpeng Dai" || name === "Runpeng Dai*") {
       return `<strong>${name}</strong>`;
     }
     const url = personWebsites[name];
