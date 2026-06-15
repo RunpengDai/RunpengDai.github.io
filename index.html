@@ -194,6 +194,38 @@
     .coauthors a:hover {
       text-decoration: underline;
     }
+    /* Publication tag filter */
+    .pub-filter {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0 18px;
+      padding-left: 10px;
+    }
+    .pub-tab {
+      padding: 5px 14px;
+      border-radius: 18px;
+      font-size: 14px;
+      font-weight: 500;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      background: #fff;
+      border: 1.5px solid;
+      line-height: 1.4;
+      transition: all 0.18s ease;
+    }
+    .pub-tab--highlight { color:#e74c3c; border-color:#e74c3c; }
+    .pub-tab--highlight.is-active { background:#e74c3c; color:#fff; }
+    .pub-tab--rl { color:#F39C12; border-color:#F39C12; }
+    .pub-tab--rl.is-active { background:#F39C12; color:#fff; }
+    .pub-tab--rlvr { color:#4A90E2; border-color:#4A90E2; }
+    .pub-tab--rlvr.is-active { background:#4A90E2; color:#fff; }
+    .pub-tab--efficient { color:#0fa716; border-color:#0fa716; }
+    .pub-tab--efficient.is-active { background:#0fa716; color:#fff; }
+    .pub-tab--application { color:#9b59b6; border-color:#9b59b6; }
+    .pub-tab--application.is-active { background:#9b59b6; color:#fff; }
+    .pub-tab--all { color:#888; border-color:#888; }
+    .pub-tab--all.is-active { background:#888; color:#fff; }
 </style>
 
 
@@ -235,9 +267,9 @@
             </a>
           </p>
             <p style="background-color:#eef1f4; padding: 15px; margin-top: 30px; font-weight:bold; text-align:center;">
-              Will be joining Apple <i class="fa fa-apple"></i> as a Research Intern in Summer 2026. 
+              Currently at Apple <i class="fa fa-apple"></i> Cupertino as a Research Intern for the Summer. 
               
-              See you in Cupertino! 
+              See you in Bay Area! 
             </p>
         </td>
         
@@ -257,7 +289,7 @@
     <h2 class="highlights-title" style="margin-top: 0px;">Research Highlights</h2>
     <ul class="highlights-list">
       <li>
-        <div class="highlight-category">LLM Reasoning</div>
+        <div class="highlight-category">LLM Reasoning & RLVR</div>
         <div class="highlight-description">
           Developing advanced reasoning training techniques and applying reasoning to real world applications.
         </div>
@@ -278,18 +310,18 @@
         </ul>
       </li>
       <li>
-        <div class="highlight-category">Reinforcement Learning</div>
+        <div class="highlight-category">Efficient Reasoning & Test Time Scaling</div>
         <div class="highlight-description">
           Developing intelligent agents and advanced post-training techniques for next-generation AI systems.
         </div>
         <ul class="highlight-projects">
           <li>
-            Causal RL: 
-            <a href="https://arxiv.org/abs/2407.17910">Causal PIE</a>: A novel framework for policy evaluation under interference in ride-sharing systems.
+            Adaptive Sampling:
+            <a href="https://arxiv.org/abs/2606.03102">RL-Guided Sampling</a>, a small RL controller that guides adaptive sampling for efficient test-time scaling.
           </li>
           <li>
-            Distributional RL: 
-            <a href="https://arxiv.org/abs/2504.08215">Non-crossing Quantile distributional RL</a> 
+            Probing:
+            <a href="https://arxiv.org/abs/2602.03845">Parallel-Probe</a>, towards efficient parallel thinking via 2D probing.
           </li>
         </ul>
       </li>
@@ -355,23 +387,48 @@
 
         <section id="Research">
         <h2 class="highlights-title" style="margin-top: 0px;">Selected Publications</h2>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="text-indent:20px;width:100%;vertical-align:middle">
-              <p>
-                *Equal contribution. Check out my <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=DaY2GdAAAAAJ">full publication list</a>.
-              </p>
+        <div class="pub-filter" id="pubFilter">
+          <button class="pub-tab pub-tab--highlight is-active" data-filter="highlight">Highlight</button>
+          <button class="pub-tab pub-tab--rl" data-filter="rl">Deep RL</button>
+          <button class="pub-tab pub-tab--rlvr" data-filter="rlvr">RLVR</button>
+          <button class="pub-tab pub-tab--efficient" data-filter="efficient-reasoning">Efficient Reasoning</button>
+          <button class="pub-tab pub-tab--application" data-filter="application">Application</button>
+          <button class="pub-tab pub-tab--all" data-filter="all">All</button>
+        </div>
+
+        <table id="pubTable" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+        <tr data-tags="rl efficient-reasoning highlight" onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
+            <td style="padding:10px;width:20%;vertical-align:middle">
+                <img src="images/RL_guided.png" alt="hpp" style="border-style: none" width="200">
             </td>
-          </tr>
-        </tbody></table>
+            <td style="padding:10px;width:80%;vertical-align:middle">
+                <p>
+                <papertitle>Small RL Controller, Large Language Model: RL-Guided Adaptive Sampling for Test-Time Scaling</papertitle>
+                </p>
+                <div class="coauthors" id="coauthors-smallrl"></div>
+                <em><strong>(arXiv)</strong>, 2026.</em>
+                <br>
+                <a href="https://arxiv.org/abs/2606.03102">[Paper]</a>
+            </td>
+        </tr>
 
-        <h3 style="text-indent:20px;color:#4A90E2;border-bottom:2px solid #4A90E2;padding-bottom:5px;">Reasoning LLM</h3>
+        <tr data-tags="efficient-reasoning" onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
+            <td style="padding:10px;width:20%;vertical-align:middle">
+                <img src="images/autotts.png" alt="hpp" style="border-style: none" width="200">
+            </td>
+            <td style="padding:10px;width:80%;vertical-align:middle">
+                <p>
+                <papertitle>LLMs Improving LLMs: Agentic Discovery for Test-Time Scaling</papertitle>
+                </p>
+                <div class="coauthors" id="coauthors-llm2llm"></div>
+                <em><strong>(arXiv)</strong>, 2026.</em>
+                <br>
+                <a href="https://arxiv.org/abs/2605.08083">[Paper]</a>
+            </td>
+        </tr>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <!-- Paper entries for Interpretable AI System Design -->
-          <!-- (Paper entries omitted for brevity) -->
-          
-        <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
+        <tr data-tags="rlvr rl highlight" onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
             <td style="padding:10px;width:20%;vertical-align:middle">
                 <img src="images/cde.jpg" alt="hpp" style="border-style: none" width="200">
             </td>
@@ -386,7 +443,7 @@
             </td>
         </tr>
         
-        <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
+        <tr data-tags="efficient-reasoning highlight" onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
             <td style="padding:10px;width:20%;vertical-align:middle">
                 <img src="images/probe.png" alt="hpp" style="border-style: none" width="200">
             </td>
@@ -401,7 +458,7 @@
                 <a href="https://github.com/zhengkid/Parallel-Probe">[Code]</a>
             </td>
         </tr>
-        <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">  
+        <tr data-tags="rlvr application highlight" onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
             <td style="padding:10px;width:20%;vertical-align:middle">
                 <img src="images/r1re.jpg" alt="hpp" style="border-style: none" width="200">
               </td>
@@ -416,7 +473,7 @@
                 <a href="https://github.com/RunpengDai/R1_RE">[Code]</a>
             </td>
         </tr>   
-        <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
+        <tr data-tags="rlvr efficient-reasoning" onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
             <td style="padding:10px;width:20%;vertical-align:middle">
                 <img src="images/parallelr1.jpg" alt="hpp" style="border-style: none" width="200">
             </td>
@@ -432,22 +489,7 @@
             </td>
         </tr>
 
-        <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
-            <td style="padding:10px;width:20%;vertical-align:middle">
-                <img src="images/VOGUE.png" alt="hpp" style="border-style: none" width="200">
-            </td>
-            <td style="padding:10px;width:80%;vertical-align:middle">
-                <p>
-                <papertitle>VOGUE: Guiding Exploration with Visual Uncertainty Improves Multimodal Reasoning</papertitle>
-                </p>
-                <div class="coauthors" id="coauthors-VOGUE"></div>
-                <em><strong>(arXiv)</strong>, 2025.</em>
-                <br>
-                <a href="https://arxiv.org/abs/2510.01444">[Paper]</a>
-            </td>
-        </tr>
-
-        <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
+        <tr data-tags="application" onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
             <td style="padding:10px;width:10%;vertical-align:middle">
                 <img src="images/stateval.png" alt="hpp" style="border-style: none" width="200">
             </td>
@@ -463,7 +505,7 @@
             </td>
         </tr>
        
-        <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">  
+        <tr data-tags="" onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
             <td style="padding:10px;width:20%;vertical-align:middle">
                 <img src="images/FI.png" alt="hpp" style="border-style: none" width="200">
               </td>
@@ -480,16 +522,7 @@
         </tr> 
         
 
-        </tbody></table>
-
-
-        <h3 style="text-indent:20px;color:#F39C12;border-bottom:2px solid #F39C12;padding-bottom:5px;"> Reinforcement Learning and Causal Inference</h3> 
-
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <!-- Paper entries for Explainability and its utilization -->
-          <!-- (Paper entries omitted for brevity) -->
-          
-        <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
+        <tr data-tags="rl application" onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
             <td style="padding:10px;width:20%;vertical-align:middle">
                 <img src="images/PIE.png" alt="hpp" style="border-style: none" width="200">
             </td>
@@ -504,7 +537,7 @@
             </td>
         </tr>
 
-        <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
+        <tr data-tags="rl" onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
             <td style="padding:10px;width:20%;vertical-align:middle">
                 <img src="images/quantile.jpg" alt="hpp" style="border-style: none" width="200">
             </td>
@@ -518,14 +551,7 @@
                 <a href="https://arxiv.org/abs/2504.08215">[Paper]</a>
             </td>
         </tr>
-        </tbody></table>
-
-      <h3 style="text-indent:20px;color:#0fa716;border-bottom:2px solid #0fa716;padding-bottom:5px;"> Applied Research </h3> 
-
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
-
-      <tr onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
+      <tr data-tags="application" onmouseout="nightsight_stop()" onmouseover="nightsight_start()">
         <td style="padding:10px;width:20%;vertical-align:middle">
             <img src="images/OD.png" alt="hpp" style="border-style: none" width="200">
         </td>
@@ -552,6 +578,8 @@
             <tr><td style="width:20%;">Lecturer of <a href="https://bios740.github.io/">Deep Learning Methods in Advanced Statistical Problems</a>, JSM 2026, ENAR 2026, JSM 2025, ICSA 2024</td></tr>
             <tr><td style="width:20%;">Graduate Travel Award Recipient, 2026, University of North Carolina at Chapel Hill</td></tr>
             <tr><td style="width:20%;">Gillings Global Health Expendable Scholarship, 2026, University of North Carolina at Chapel Hill</td></tr>
+            <tr><td style="width:20%;">LAMBDA Research Grant, 2026</td></tr>
+            <tr><td style="width:20%;">ICLR 2026 Travel Award</td></tr>
           </table> 
           </section>
         <br>
@@ -637,11 +665,16 @@
     const fiDiv = document.getElementById('coauthors-FI');
     if (fiDiv) fiDiv.innerHTML = renderAuthors(fiAuthors);
 
-    // VOGUE
-    const vogueAuthors = "Rui Liu, Dian Yu, Tong Zheng, Runpeng Dai, Zongxia Li, Wenhao Yu, Zhenwen Liang, Linfeng Song, Haitao Mi, Pratap Tokekar, Dong Yu";
-    const vogueDiv = document.getElementById('coauthors-VOGUE');
-    if (vogueDiv) vogueDiv.innerHTML = renderAuthors(vogueAuthors);
-    
+    // Small RL Controller
+    const smallrlAuthors = "Runpeng Dai, Tong Zheng, Rui Liu, Chengsong Huang, Hongtu Zhu";
+    const smallrlDiv = document.getElementById('coauthors-smallrl');
+    if (smallrlDiv) smallrlDiv.innerHTML = renderAuthors(smallrlAuthors);
+
+    // LLMs Improving LLMs
+    const llm2llmAuthors = "Tong Zheng, Haolin Liu, Chengsong Huang, Huiwen Bao, Sheng Zhang, Rui Liu, Runpeng Dai, Ruibo Chen, Chenxi Liu, Tianyi Xiong, Xidong Wu, Hongming Zhang, Heng Huang";
+    const llm2llmDiv = document.getElementById('coauthors-llm2llm');
+    if (llm2llmDiv) llm2llmDiv.innerHTML = renderAuthors(llm2llmAuthors);
+
     // StatEval
     const statEvalAuthors = "Yuchen Lu, Run Yang, Yichen Zhang, Shuguang Yu, Runpeng Dai, ..., Fan Zhou";
     const statEvalDiv = document.getElementById('coauthors-stat_eval');
@@ -661,6 +694,19 @@
     const odAuthors = "Run Yang, Runpeng Dai, Siran Gao, Xiaocheng Tang, Fan Zhou, Hongtu Zhu";
     const odDiv = document.getElementById('coauthors-OD');
     if (odDiv) odDiv.innerHTML = renderAuthors(odAuthors);
+
+    // Publication tag filter
+    function applyPubFilter(tag) {
+      document.querySelectorAll('#pubFilter .pub-tab').forEach(b =>
+        b.classList.toggle('is-active', b.dataset.filter === tag));
+      document.querySelectorAll('#pubTable tbody tr').forEach(tr => {
+        const tags = (tr.dataset.tags || '').split(/\s+/);
+        tr.style.display = (tag === 'all' || tags.includes(tag)) ? '' : 'none';
+      });
+    }
+    document.querySelectorAll('#pubFilter .pub-tab').forEach(b =>
+      b.addEventListener('click', () => applyPubFilter(b.dataset.filter)));
+    applyPubFilter('highlight');   // default tab on load
   };
 </script>
 <!-- Runpeng's Google tag (gtag.js) -->
